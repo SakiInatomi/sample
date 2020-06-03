@@ -29,7 +29,13 @@ if (env('APP_ENV') === 'local') {
 //Route::get('/posts/create', 'PostController@create');
 //Route::post('/posts', 'PostController@store');
 
-
+//画像をアップロードするページ
+Route::get('/upload', 'ImageController@input');
+//画像を保存したり画像名をDBに格納する部分
+Route::post('/upload', 'ImageController@upload');
+//保存した画像を表示するページ
+Route::get('/output', 'ImageController@output');
+//上記までを追記
 
 Auth::routes();
 
