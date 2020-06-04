@@ -16,7 +16,7 @@
     </div>
 @endif
 
-<form method="POST" action="/sample/posts">
+<form method="POST" action="/sample/posts" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="form-group">
         <label for="exampleInputEmail1">Title</label>
@@ -26,9 +26,17 @@
         <label for="exampleInputEmail1">Age</label>
             <input type="text" class="form-control" aria-describedby="emailHelp" name="age" value="{{old('age')}}">
     </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Seibetu</label>
-            <input type="text" class="form-control" aria-describedby="emailHelp" name="seibetu" value="{{old('seibetu')}}">
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="seibetu" id="exampleRadios1" value="0" checked>
+        <label class="form-check-label" for="exampleRadios1">
+        男性
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="seibetu" id="exampleRadios2" value="1">
+        <label class="form-check-label" for="exampleRadios2">
+        女性
+        </label>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Juusyo</label>

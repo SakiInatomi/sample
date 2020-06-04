@@ -40,12 +40,21 @@ class PostController extends Controller
             $request->validate([
                 'title' => 'required',
                 'content' => 'required',
+                'seibetu' => 'required',
+                'juusyo' => 'required',
             ]);
 
         $post = new Post();
-        $post->title = $request->input('title');
-        $post->content = $request->input('content');
-        $post->save();
+        //$post->title = $request->input('title');
+        //$post->content = $request->input('content');
+        //$post->save();
+        //ファイル名を取得
+        $filename = $request->file('image')->getClientOriginalName();
+        // image,skillを配列へ書き換える
+        $storedata =  array_replace($request->all(), array('image' => $filename) );
+        $post->fill($storedata)->save();
+        // ファイルの保存
+        $request->file('image')->storeAs('public/'.$post->id.'/', $filename);
 
         return redirect(route('posts.show', $post->id))->with('message', '新しい記事を登録しました。');
         //return redirect()->route('posts.show', ['id' => $post->id])->with('message', 'Post was successfully created.');
