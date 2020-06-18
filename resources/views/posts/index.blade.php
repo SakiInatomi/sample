@@ -15,7 +15,21 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">{{ $post->title }}</h5>
-                <p class="card-text">{{ $post->content }}</p>
+                <img class="logo" src="{{ asset('public/storage') }}/{{ $post->id }}/{{ $post->image }}">
+                <p class="card-text">年齢 {{ $post->age }}</p>
+                <p>
+                性別
+                    @if ($post->seibetu === 0)
+                        男性
+                    @elseif ($post->seibetu === 1)
+                        女性
+                    @else
+                        登録なし
+                    @endif
+                </p>
+                <p class="card-text">住所 {{ $post->juusyo }}</p>
+                <p class="card-text">カテゴリ {{ $post->categoly }}</p>
+                内容 <p class="card-text">{{ $post->content }}</p>
 
                 <div class="d-flex" style="height: 36.4px;">
                     <a href="/sample/posts/{{ $post->id }}" class="btn btn-outline-primary">Show</a>
