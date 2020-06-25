@@ -134,27 +134,46 @@
     </section><!-- End About Section -->
 
     <!-- ======= Why Us Section ======= -->
+   
+  @foreach($posts as $post)
+
     <section id="why-us" class="why-us section-bg">
       <div class="container">
-
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="card">
-              <img src="assets/img/why-us-1.jpg" class="card-img-top" alt="...">
+              <img src="{{ asset('public/storage') }}/{{ $post->id }}/{{ $post->image }}" class="card-img-top" alt="...">
               <div class="card-icon">
                 <i class="bx bx-book-reader"></i>
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">{{ $post->title }}</a></h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                <p class="card-text">
+                <p>年齢 {{ $post->age }}</p>
+                <p>
+                性別
+                    @if ($post->seibetu === 0)
+                        男性
+                    @elseif ($post->seibetu === 1)
+                        女性
+                    @else
+                        登録なし
+                    @endif
+                </p>
+                <p class="card-text">住所 {{ $post->juusyo }}</p>
+                <p class="card-text">カテゴリ {{ $post->categoly }}</p>
+                内容 <p class="card-text">{{ $post->content }}</p> 
+                </p>
               </div>
             </div>
-          </div>
+          </div>          
         </div>
-
       </div>
-    </section><!-- End Why Us Section -->
+    </section>
+    <!-- End Why Us Section -->
 
+    @endforeach
+   
     <!-- ======= Frequenty Asked Questions Section ======= -->
     <section class="faq">
       <div class="container">
