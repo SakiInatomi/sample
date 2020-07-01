@@ -32,7 +32,8 @@
 </head>
 
 <body>
-
+@component('components.topheader')
+@endcomponent
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container-fluid">
@@ -135,14 +136,16 @@
 
     <!-- ======= Why Us Section ======= -->
    
-  @foreach($posts as $post)
+  
 
     <section id="why-us" class="why-us section-bg">
       <div class="container">
         <div class="row">
+        @foreach($posts as $post)
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          
             <div class="card">
-              <img src="{{ asset('public/storage') }}/{{ $post->id }}/{{ $post->image }}" class="card-img-top" alt="...">
+              <img src="{{ asset('public/storage') }}/{{ $post->id }}/{{ $post->image }}" class="card-img-top card" alt="...">
               <div class="card-icon">
                 <i class="bx bx-book-reader"></i>
               </div>
@@ -166,13 +169,14 @@
                 </p>
               </div>
             </div>
-          </div>          
+          </div> 
+          @endforeach  
         </div>
       </div>
     </section>
     <!-- End Why Us Section -->
 
-    @endforeach
+    
    
     <!-- ======= Frequenty Asked Questions Section ======= -->
     <section class="faq">

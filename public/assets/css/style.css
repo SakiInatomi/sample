@@ -664,3 +664,10 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+
+img.card {
+  width: 300px;
+  height: 300px;
+  }
+  

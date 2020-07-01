@@ -26,6 +26,14 @@
         <label for="exampleInputEmail1">Age</label>
             <input type="text" class="form-control" aria-describedby="emailHelp" name="age" value="{{old('age')}}">
     </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Age</label>
+        <select name="kidsage">
+  <option value="0">Under 18</option>
+  <option value="1">19 to 30</option>
+  <option value="2">Over 30</option>
+</select>
+    </div>
     <div class="form-check">
         <input class="form-check-input" type="radio" name="seibetu" id="exampleRadios1" value="0" checked>
         <label class="form-check-label" for="exampleRadios1">
