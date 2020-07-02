@@ -41,3 +41,10 @@ Route::get('/output', 'ImageController@output');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::resource('posts/kids', 'KidsPostController');
+
+if (env('APP_ENV') === 'local') {
+   URL::forceScheme('https');
+} 

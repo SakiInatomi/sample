@@ -19,19 +19,15 @@
 <form method="POST" action="/sample/posts" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="form-group">
-        <label for="exampleInputEmail1">Title</label>
+        <label for="exampleInputEmail1">題名</label>
             <input type="text" class="form-control" aria-describedby="emailHelp" name="title" value="{{old('title')}}">
     </div>
     <div class="form-group">
-        <label for="exampleInputEmail1">Age</label>
-            <input type="text" class="form-control" aria-describedby="emailHelp" name="age" value="{{old('age')}}">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Age</label>
+        <label for="exampleInputEmail1">年齢</label>
         <select name="kidsage">
-  <option value="0">Under 18</option>
-  <option value="1">19 to 30</option>
-  <option value="2">Over 30</option>
+  <option value="0">18以下</option>
+  <option value="1">19～30</option>
+  <option value="2">30以上</option>
 </select>
     </div>
     <div class="form-check">
@@ -47,19 +43,19 @@
         </label>
     </div>
     <div class="form-group">
-        <label for="exampleInputEmail1">Juusyo</label>
+        <label for="exampleInputEmail1">住所</label>
             <input type="text" class="form-control" aria-describedby="emailHelp" name="juusyo" value="{{old('juusyo')}}">
     </div>
     <div class="form-group">
-        <label for="exampleInputEmail1">Categoly</label>
+        <label for="exampleInputEmail1">カテゴリ</label>
             <input type="text" class="form-control" aria-describedby="emailHelp" name="categoly" value="{{old('categoly')}}">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Content</label>
+        <label for="exampleInputPassword1">一言</label>
             <textarea class="form-control" name="content">{{old('content')}}</textarea>
     </div>
     
-    <label for="photo">Image</label>
+    <label for="photo">イメージ画像</label>
     <input type="file" class="form-control" name="image">
     <br>
     <button type="submit" class="btn btn-outline-primary">Submit</button>
