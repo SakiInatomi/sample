@@ -43,7 +43,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::resource('posts/kids', 'KidsPostController');
+Route::resource('kids', 'KidsPostController');
 
 if (env('APP_ENV') === 'local') {
    URL::forceScheme('https');

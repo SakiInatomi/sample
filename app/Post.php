@@ -13,6 +13,8 @@ class Post extends Model
         'juusyo',
         'categoly',
         'content',
+        'reservdate',
+        'reservtime',
         'image',
     ];
 }

@@ -54,7 +54,19 @@
         <label for="exampleInputPassword1">一言</label>
             <textarea class="form-control" name="content">{{old('content')}}</textarea>
     </div>
-    
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">日程</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" name="reservdate" id="flatpickr" value="{{old('categoly')}}">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">年齢</label>
+    <select name="reservtime">
+        <option value="9:00">9:00</option>
+        <option value="9:30">9:30</option>
+        <option value="10:00">10:00</option>
+    </select>
+
     <label for="photo">イメージ画像</label>
     <input type="file" class="form-control" name="image">
     <br>

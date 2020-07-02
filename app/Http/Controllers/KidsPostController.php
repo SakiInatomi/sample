@@ -16,7 +16,7 @@ class KidsPostController extends Controller
     {
         $posts = Post::all();
 
-        return view('posts.kids.index', compact('posts'));
+        return view('kids.index', compact('posts'));
     }
 
     /**
@@ -26,7 +26,7 @@ class KidsPostController extends Controller
      */
     public function create()
     {
-        return view('posts.kids.create');
+        return view('kids.create');
     }
 
     /**
@@ -44,7 +44,7 @@ class KidsPostController extends Controller
         $post->useraddress = $request->input('useraddress');
         $post->save();
 
-        return redirect()->route('posts.kids.show', ['id' => $post->id])->with('message', 'Post was successfully created.');
+        return redirect()->route('kids.show', ['id' => $post->id])->with('message', 'Post was successfully created.');
     }
 
     /**
@@ -55,7 +55,7 @@ class KidsPostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('posts.kids.show', compact('post'));    }
+        return view('kids.show', compact('post'));    }
 
     /**
      * Show the form for editing the specified resource.
@@ -65,7 +65,7 @@ class KidsPostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('posts.kids.edit', compact('post'));
+        return view('kids.edit', compact('post'));
     }
 
     /**
@@ -83,7 +83,7 @@ class KidsPostController extends Controller
         $post->useraddress = $request->input('useraddress');
         $post->save();
 
-        return redirect()->route('posts.kids.show', ['id' => $post->id])->with('message', 'Post was successfully updated.');
+        return redirect()->route('kids.show', ['id' => $post->id])->with('message', 'Post was successfully updated.');
     }
 
     /**
@@ -96,6 +96,6 @@ class KidsPostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('posts.kids.index');
+        return redirect()->route('kids.index');
     }
 }

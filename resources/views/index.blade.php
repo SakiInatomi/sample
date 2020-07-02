@@ -19,9 +19,12 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <!-- =======================================================
   * Template Name: Siimple - v2.1.0
@@ -83,7 +86,7 @@
       <form action="forms/notify.php" method="post" role="form" class="php-email-form">
         <div class="row no-gutters">
           <div class="col-md-6 form-group pr-md-1">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            <input type="text" name="reservdate" class="form-control" id="flatpickr" placeholder="日付で探す" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
             <div class="validate"></div>
           </div>
           <div class="col-md-6 form-group pl-md-1">
@@ -342,6 +345,10 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    flatpickr("#flatpickr", {});
+  </script>
 
 </body>
 

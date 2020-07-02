@@ -5,6 +5,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     </head>
     <body>
         @component('components.header')
@@ -17,5 +18,9 @@
         @endcomponent
 
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+            flatpickr("#flatpickr", {});
+        </script>
     </body>
 </html> 
