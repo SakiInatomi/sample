@@ -1,4 +1,4 @@
-<form method="POST" action="/sample/posts/kids">
+<form method="POST" action="/sample/kids">
     {{ csrf_field() }}
 
     <div class="form-group">
@@ -26,7 +26,8 @@
         <label for="exampleInputEmail1">カテゴリ</label>
             <input type="text" class="form-control" aria-describedby="emailHelp" name="useraddress" value="{{old('useraddress')}}">
     </div>
-<!--    <input type="text" name="username">
+<!--
+    <input type="text" name="username">
     <input type="text" name="userage">
     <input type="text" name="tell">
     <input type="text" name="useraddress">

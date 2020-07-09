@@ -7,4 +7,4 @@
     {{ $post->tell }}
     {{ $post->useraddress }} 
 
-    <a href="/sample/posts/kids/{{ $post->id }}/edit">Edit</a>
+    <a href="/sample/kids/{{ $post->id }}/edit">Edit</a>

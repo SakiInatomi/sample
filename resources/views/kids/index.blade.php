@@ -11,7 +11,7 @@
     <h1>Posts</h1>
 
 
-<a href="/sample/posts/kids/create">New Post</a>
+<a href="/sample/kids/create">New Post</a>
 
 
 @foreach($posts as $post)
@@ -23,9 +23,9 @@
                 <p class="card-text">年齢 {{ $post->userage }}</p>
                 <p class="card-text">連絡先 {{ $post->tell }}</p>
                 <p class="card-text">住所 {{ $post->useraddress }}</p>
-                    <a href="/sample/posts/kids/{{ $post->id }}" class="btn btn-outline-primary">Show</a>
-                    <a href="/sample/posts/kids/{{ $post->id }}/edit" class="btn btn-outline-primary">Edit</a>
-                    <form action="/sample/posts/kids/{{ $post->id }}" method="POST" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
+                    <a href="/sample/kids/{{ $post->id }}" class="btn btn-outline-primary">Show</a>
+                    <a href="/sample/kids/{{ $post->id }}/edit" class="btn btn-outline-primary">Edit</a>
+                    <form action="/sample/kids/{{ $post->id }}" method="POST" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
                         <input type="hidden" name="_method" value="DELETE">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <button type="submit" class="btn btn-outline-danger">Delete</button>
@@ -34,5 +34,5 @@
 </div>
 @endforeach
 
-<a href="/sample/posts/kids/create">New Post</a> 
+<a href="/sample/kids/create">New Post</a> 
 @endsection

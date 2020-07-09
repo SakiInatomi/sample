@@ -25,6 +25,9 @@
             <p class="card-text">カテゴリ {{ $post->categoly }}</p>
             内容 <p class="card-text">{{ $post->content }}</p>
 
+            <p class="card-text">日程 {{ $post->reservdate }}</p>
+            <p class="card-text">時間 {{ $post->reservtime }}</p>
+
             <div class="d-flex" style="height: 36.4px;">
                 <button class="btn btn-outline-primary">Show</button>
                 <a href="/sample/posts/{{ $post->id }}/edit" class="btn btn-outline-primary">Edit</a>

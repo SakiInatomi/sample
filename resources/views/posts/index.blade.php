@@ -10,13 +10,21 @@
 
     <h1>Posts</h1>
 
-    @foreach($posts as $post)
-
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">{{ $post->title }}</h5>
-                <img class="logo" src="{{ asset('public/storage') }}/{{ $post->id }}/{{ $post->image }}">
-                <p class="card-text">年齢 {{ $post->age }}</p>
+    <section id="why-us" class="why-us section-bg">
+      <div class="container">
+        <div class="row">
+        @foreach($posts as $post)
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          
+            <div class="card">
+              <img src="{{ asset('public/storage') }}/{{ $post->id }}/{{ $post->image }}" class="card-img-top card" alt="...">
+              <div class="card-icon">
+                <i class="bx bx-book-reader"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">{{ $post->title }}</a></h5>
+                <p class="card-text">
+                <p>年齢 {{ $post->age }}</p>
                 <p>
                 性別
                     @if ($post->seibetu === 0)
@@ -29,19 +37,18 @@
                 </p>
                 <p class="card-text">住所 {{ $post->juusyo }}</p>
                 <p class="card-text">カテゴリ {{ $post->categoly }}</p>
-                内容 <p class="card-text">{{ $post->content }}</p>
-
-                <div class="d-flex" style="height: 36.4px;">
-                    <a href="/sample/posts/{{ $post->id }}" class="btn btn-outline-primary">Show</a>
-                    <a href="/sample/posts/{{ $post->id }}/edit" class="btn btn-outline-primary">Edit</a>
-                    <form action="/sample/posts/{{ $post->id }}" method="POST" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <button type="submit" class="btn btn-outline-danger">Delete</button>
-                    </form>
-                </div>
+                <p class="card-text">日程 {{ $post->reservdate }}</p>
+                <p class="card-text">時間 {{ $post->reservtime }}</p>
+                内容 <p class="card-text">{{ $post->content }}</p> 
+                </p>
+              </div>
             </div>
+          </div> 
+          @endforeach  
         </div>
-    @endforeach
+      </div>
+    </section>
+
+
     <a href="/sample/posts/create">New Post</a>
 @endsection

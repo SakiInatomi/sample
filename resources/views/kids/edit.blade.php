@@ -1,4 +1,4 @@
-<form method="POST" action="/sample/posts/kids/{{ $post->id }}">
+<form method="POST" action="/sample/kids/{{ $post->id }}">
         {{ csrf_field() }}
         <input type="hidden" name="_method" value="PUT">
         <input type="text" name="username" value="{{ $post->username }}">

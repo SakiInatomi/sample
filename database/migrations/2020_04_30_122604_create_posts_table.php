@@ -21,6 +21,8 @@ class CreatePostsTable extends Migration
             $table->string('juusyo');
             $table->string('categoly');
             $table->text('content');
+            $table->varchar('reservdate');
+            $table->varchar('reservtime');
             $table->string('image');
             $table->timestamps();
         });
