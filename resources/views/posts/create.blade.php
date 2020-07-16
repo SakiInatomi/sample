@@ -44,7 +44,22 @@
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">住所</label>
-            <input type="text" class="form-control" aria-describedby="emailHelp" name="juusyo" value="{{old('juusyo')}}">
+        <select name="juusyo">
+        <option value="北海道">北海道</option>
+            <option value="青森県">青森県</option>
+            <option value="岩手県">岩手県</option>
+            <option value="宮城県">宮城県</option>
+            <option value="東京都">東京都</option>
+            <option value="大阪府">大阪府</option>
+            <option value="福岡県">福岡県</option>
+            <option value="佐賀県">佐賀県</option>
+            <option value="長崎県">長崎県</option>
+            <option value="熊本県">熊本県</option>
+            <option value="大分県">大分県</option>
+            <option value="宮崎県">宮崎県</option>
+            <option value="鹿児島県">鹿児島県</option>
+            <option value="沖縄県">沖縄県</option>
+    </select>
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">カテゴリ</label>
