@@ -89,7 +89,7 @@
             <input type="text" name="reservdate" class="form-control" id="flatpickr" placeholder="日付で探す" data-rule="minlen:4" data-msg="日付を選択してください。" />
             <div class="validate"></div>
           </div>
-          <div class="col-md-6 form-group pl-md-1">
+          <!-- <div class="col-md-6 form-group pl-md-1">
           <input type="text" class="form-select" name="juusyo" id="juusyo" placeholder="地域で探す" data-rule="juusyo" data-msg="地域を選択してください。" /> 
               <select name="juusyo">
                 <option value="北海道">北海道</option>
@@ -107,15 +107,35 @@
                 <option value="鹿児島県">鹿児島県</option>
                 <option value="沖縄県">沖縄県</option>
               </select>
+          </div> -->
+ 
+          <div class="col-md-6 form-group pr-md-1">
+            <select id="inputState"　name="juusyo" class="form-control">
+              <option selected>地域で探す</option>
+              <option value="北海道">北海道</option>
+              <option value="青森県">青森県</option>
+              <option value="岩手県">岩手県</option>
+              <option value="宮城県">宮城県</option>
+              <option value="東京都">東京都</option>
+              <option value="大阪府">大阪府</option>
+              <option value="福岡県">福岡県</option>
+              <option value="佐賀県">佐賀県</option>
+              <option value="長崎県">長崎県</option>
+              <option value="熊本県">熊本県</option>
+              <option value="大分県">大分県</option>
+              <option value="宮崎県">宮崎県</option>
+              <option value="鹿児島県">鹿児島県</option>
+              <option value="沖縄県">沖縄県</option>
+            </select>
           </div>
-        </div>
+        
 
         <div class="mb-1">
           <div class="loading">Loading</div>
           <div class="error-message"></div>
           <div class="sent-message">Your notification request was sent. Thank you!</div>
         </div>
-        <div class="text-center"><button type="submit">Notify me!</button></div>
+        <div class="text-center"><button type="submit">検索</button></div>
       </form>
     </div>
   </section><!-- #hero -->
