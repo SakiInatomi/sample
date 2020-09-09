@@ -42,7 +42,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/kids/serch', 'TopController@serch')->name('serch');
+Route::post('/serch', 'TopController@serch')->name('serch');
 
 Route::resource('kids', 'KidsPostController');
 

@@ -19,9 +19,8 @@ class TopController extends Controller
 
     public function serch(Request $request)
     {
-        $posts = DB::table('posts') ->whereColumn([ ['reservdate', '=', $request->reservdate], ['juusyo', '=', $request->juusyo]
-                        ])->get();
-
+        $posts = DB::table('posts') ->whereColumn([ ['reservdate', '=', $request->reservdate], ['juusyo', '=', $request->juusyo]])->get();
+        dd($posts);
         return view('kids.result',compact('posts'));
         
     }

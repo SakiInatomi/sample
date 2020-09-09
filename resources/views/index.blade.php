@@ -83,7 +83,8 @@
       <h1>Welcome to Siimple</h1>
       <h2>Please, fill out the for below to be notified for the latest updates!</h2>
 
-      <form action="/sample/kids/result" method="post" role="form" class="php-email-form">
+      <form action="/sample/posts" method="post" role="form" class="php-email-form">
+      {{ csrf_field() }}
         <div class="row no-gutters">
           <div class="col-md-6 form-group pr-md-1">
             <input type="text" name="reservdate" class="form-control" id="flatpickr" placeholder="日付で探す" data-rule="minlen:4" data-msg="日付を選択してください。" />
@@ -102,6 +103,7 @@
                 <option value="佐賀県">佐賀県</option>
                 <option value="長崎県">長崎県</option>
                 <option value="熊本県">熊本県</option>
+                
                 <option value="大分県">大分県</option>
                 <option value="宮崎県">宮崎県</option>
                 <option value="鹿児島県">鹿児島県</option>
@@ -130,11 +132,7 @@
           </div>
         
 
-        <div class="mb-1">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your notification request was sent. Thank you!</div>
-        </div>
+        
         <div class="text-center"><button type="submit">検索</button></div>
       </form>
     </div>
